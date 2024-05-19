@@ -19,8 +19,8 @@
 
 .penguin {
   /* full height 13px, disappers at 66px, to avoid clicks 80px */
-  transform: scale(1.5) translatey(80px);
-  width: 60%;
+  transform: scale(1.5) translatey(75%);
+  width: 70%;
 }
 
 .hole {
@@ -67,7 +67,7 @@
 
 @keyframes move {
   0% {
-    transform: scale(1.5) translatey(88px);
+    transform: scale(1.5) translatey(75%);
   }
   45% {
     transform: scale(1.5) translatey(18%);
@@ -76,7 +76,7 @@
     transform: scale(1.5) translatey(18%);
   }
   100% {
-    transform: scale(1.5) translatey(88px);
+    transform: scale(1.5) translatey(75%);
   }
 }
 
@@ -87,7 +87,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  height: fit-content;
+  height: fit-content !important;
 }
 
 .status-bar div:first-child {
@@ -119,29 +119,59 @@
 }
 
 
-@media (min-width: 768px) {
-  .game {
-    transform: translateY(10%);
-    height: 50vh;
+@media (min-width: 500px) {
+  .background {
+    background-size: 160%;
+    background-position-y: 120px;
   }
-  
+}
+
+
+@media (min-width: 768px) {
   .background {
     align-items: normal;
     background-position-y: 70px;
     background-size: 100%;
   }
-}
 
+  .container {
+    margin-top: 10px;
+    width: 70vw;
+    height: 80vh;
+  }  
+  .game {
+    transform: translateY(0);
+    height: 40vh;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    margin-top: 10px;
+    width: 65vw;
+    height: 80vh;
+  }
+  .game {
+    transform: translateY(0);
+    height: 50vh;
+  }
+}
 /* Large */
 @media (min-width: 1200px) {
+  .background {
+    align-items: normal;
+    background-position-y: 100px;
+    background-size: 80%;
+  }
+
+  .container {
+    margin-top: 30px;
+    width: 55vw;
+    height: 70vh;
+  }
+  
   .game {
     transform: translateY(5%);
     height: 50vh;
-  }
-  
-  .background {
-    align-items: normal;
-    background-position-y: 70px;
-    background-size: 80%;
-  }
+  }  
 }
