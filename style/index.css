@@ -50,6 +50,8 @@ img {
 }
 .level-hell {
   animation: level 3s infinite forwards;
+  width: 120vw;
+  height: 120vh;
 }
 
 @keyframes level {
