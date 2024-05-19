@@ -15,6 +15,39 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.clicked-penguin::before {
+  content: var(--points);
+  position: absolute;
+  color: var(--pumpkin);
+  left: 75%;
+  top: 0;
+  animation: point calc(var(--animation-speed) / 4) ease-in 1;
+  z-index: 1000;
+}
+
+.missed-penguin::before {
+  content: "-1";
+  position: absolute;
+  color: rgb(255, 8, 0);
+  font-size: 18px;
+  left: 75%;
+  top: 30%;
+  animation: point calc(var(--animation-speed) / 4) ease-in 1;
+  z-index: 1000;
+}
+
+@keyframes point {
+  from {
+    opacity: 1;
+    transform: translate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
 }
 
 .penguin {
@@ -60,7 +93,7 @@
 
 .penguin-move {
   animation-name: move;
-  animation-duration: 2s;
+  animation-duration: var(--animation-speed);
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }

@@ -1,6 +1,6 @@
 import { runGame } from "./game.js";
 
-const areaElement = document.querySelector(".area");
+const areaElement = document.querySelector(".area-js");
 
 renderHome();
 
@@ -37,14 +37,14 @@ export function renderGame() {
       <div>
         <div class="health">
           <img src="./img/full-heart.svg" alt="">
-          <div></div>
+          <div>x5</div>
         </div>
         <div class="points">
           <img src="./img/points.svg" alt="">
-          <div></div>
+          <div>0pts</div>
         </div>
       </div>
-      <div class="level"></div>
+      <div class="level">LV: 1</div>
     </div>
     <div class="container game">
       <div class="one">

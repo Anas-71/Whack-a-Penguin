@@ -14,6 +14,10 @@ main {
   --light-blue: #3a6ea5ff;
   --dark-blue: #004e98ff;
 
+  --animation-speed: 2s;
+  --points: "+100pts";
+  transition: filter 0.5s;
+  position: relative;
 }
 
 .background {
@@ -35,4 +39,33 @@ main {
   margin-top: 20px;
   width: 95vw;
   height: 80vh;
+}
+
+img {
+  user-select: none;
+}
+
+.invert {
+  filter: invert(1);
+}
+.level-hell {
+  animation: level 3s infinite forwards;
+}
+
+@keyframes level {
+  0% {
+    transform: translate(0, 0%);
+  }
+  20% {
+    transform: translate(10%, 0%);
+  }
+  60% {
+    transform: translate(-10%, 0%);
+  }
+  80% {
+    transform: translate(0%, 10%);
+  }
+  100% {
+    transform: translate(0, 0%);
+  }
 }
