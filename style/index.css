@@ -50,7 +50,7 @@ img {
 }
 .level-hell {
   animation: level 3s infinite forwards;
-  width: 120vw;
+  width: 200vw;
   height: 120vh;
 }
 
