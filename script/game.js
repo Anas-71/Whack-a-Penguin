@@ -127,7 +127,7 @@ export function runGame() {
     }
     else {
       mainElemnt.classList.add("invert");
-      mainElemnt.style.setProperty("--animation-speed", "1.5s");
+      mainElemnt.style.setProperty("--animation-speed", "1s");
       mainElemnt.style.setProperty("--points", `"+${pointsIncrement}pts"`);
 
       areaElement.classList.add("level-hell");
