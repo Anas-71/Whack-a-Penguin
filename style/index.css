@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  overflow: hidden;
+  background-color: lightblue;
+  font-family: Arial, Helvetica, sans-serif;
+
+  --pumpkin: #ff6700ff;
+  --grey-white: #ebebebff;
+  --silver: #c0c0c0ff;
+  --light-blue: #3a6ea5ff;
+  --dark-blue: #004e98ff;
+
+}
+
+.background {
+  background-image: url("../img/iceberg-background.png");
+  background-color: lightblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 220%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  margin-top: 20px;
+  width: 95vw;
+  height: 80vh;
+}
+
+@media (min-width: 320px) {
+  .background {
+    background-size: 170%;
+  }
+}
+
+@media (min-width: 500px) {
+  .background {
+    background-size: 150%;
+    background-position-y: 70px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 10px;
+    width: 70vw;
+    height: 80vh;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    margin-top: 10px;
+    width: 65vw;
+    height: 80vh;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    margin-top: 30px;
+    width: 55vw;
+    height: 70vh;
+  }
+}
